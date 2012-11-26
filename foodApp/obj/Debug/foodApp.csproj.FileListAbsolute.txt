@@ -3,3 +3,8 @@ C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\food
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Debug\foodApp.csprojResolveAssemblyReference.cache
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Debug\foodApp.dll
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Debug\foodApp.pdb
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp\bin\foodApp.dll
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp\bin\foodApp.pdb
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp\obj\Debug\foodApp.dll
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp\obj\Debug\foodApp.pdb

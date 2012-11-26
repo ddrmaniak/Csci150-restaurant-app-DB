@@ -6,3 +6,11 @@ C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\bi
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\obj\Debug\foodApp.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\obj\Debug\foodApp.Tests.dll
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\obj\Debug\foodApp.Tests.pdb
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\bin\Debug\foodApp.Tests.dll.config
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\bin\Debug\foodApp.Tests.dll
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\bin\Debug\foodApp.Tests.pdb
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\bin\Debug\foodApp.dll
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\bin\Debug\foodApp.pdb
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\obj\Debug\ResolveAssemblyReference.cache
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\obj\Debug\foodApp.Tests.dll
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\foodApp.Tests\obj\Debug\foodApp.Tests.pdb

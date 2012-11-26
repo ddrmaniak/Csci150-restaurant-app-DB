@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="FoodAppService.tag" CodeBehind="tag.svc.cs" %>
