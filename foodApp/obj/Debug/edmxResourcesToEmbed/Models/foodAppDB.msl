@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="foodAppModelStoreContainer" CdmEntityContainer="foodAppEntities">
+    <EntitySetMapping Name="Restuarants">
+      <EntityTypeMapping TypeName="foodAppModel.Restuarant">
+        <MappingFragment StoreEntitySet="Restuarant">
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="Resturant_name" ColumnName="Resturant_name" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="average_rating" ColumnName="average_rating" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restuarant_tag">
+      <EntityTypeMapping TypeName="foodAppModel.restuarant_tag">
+        <MappingFragment StoreEntitySet="restuarant_tag">
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resturant_food">
+      <EntityTypeMapping TypeName="foodAppModel.Resturant_food">
+        <MappingFragment StoreEntitySet="Resturant_food">
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="food" ColumnName="food" />
+          <ScalarProperty Name="spicy_rating" ColumnName="spicy_rating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="foodAppModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_acc">
+      <EntityTypeMapping TypeName="foodAppModel.User_acc">
+        <MappingFragment StoreEntitySet="User_acc">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_food">
+      <EntityTypeMapping TypeName="foodAppModel.user_food">
+        <MappingFragment StoreEntitySet="user_food">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="review" ColumnName="review" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="UFID" ColumnName="UFID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_rest">
+      <EntityTypeMapping TypeName="foodAppModel.user_rest">
+        <MappingFragment StoreEntitySet="user_rest">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="review" ColumnName="review" />
+          <ScalarProperty Name="URID" ColumnName="URID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

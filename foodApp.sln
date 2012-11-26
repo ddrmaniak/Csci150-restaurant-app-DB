@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "foodApp", "foodApp\foodApp.csproj", "{B586ECAB-A744-48EC-9418-C0BB41936A22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "foodApp.Tests", "foodApp.Tests\foodApp.Tests.csproj", "{5CB1E89A-1559-4639-8C41-C1C823BF6607}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB1E89A-1559-4639-8C41-C1C823BF6607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB1E89A-1559-4639-8C41-C1C823BF6607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB1E89A-1559-4639-8C41-C1C823BF6607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB1E89A-1559-4639-8C41-C1C823BF6607}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

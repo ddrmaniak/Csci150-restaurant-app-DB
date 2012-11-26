@@ -1,0 +1,8 @@
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\bin\Debug\foodApp.Tests.dll.config
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\bin\Debug\foodApp.Tests.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\bin\Debug\foodApp.Tests.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\bin\Debug\foodApp.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\bin\Debug\foodApp.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\obj\Debug\foodApp.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\obj\Debug\foodApp.Tests.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp.Tests\obj\Debug\foodApp.Tests.pdb

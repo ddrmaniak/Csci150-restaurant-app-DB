@@ -1,0 +1,5 @@
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\foodApp.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\foodApp.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Debug\foodApp.csprojResolveAssemblyReference.cache
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Debug\foodApp.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Debug\foodApp.pdb

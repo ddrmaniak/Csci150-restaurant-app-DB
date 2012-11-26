@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="foodAppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="foodAppModelStoreContainer">
+    <EntitySet Name="Restuarant" EntityType="foodAppModel.Store.Restuarant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="restuarant_tag" EntityType="foodAppModel.Store.restuarant_tag" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Resturant_food" EntityType="foodAppModel.Store.Resturant_food" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="foodAppModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User_acc" EntityType="foodAppModel.Store.User_acc" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="user_food" EntityType="foodAppModel.Store.user_food" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="user_rest" EntityType="foodAppModel.Store.user_rest" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_restuarant_tag_Restuarant" Association="foodAppModel.Store.FK_restuarant_tag_Restuarant">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="restuarant_tag" EntitySet="restuarant_tag" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resturant_food_Restuarant" Association="foodAppModel.Store.FK_Resturant_food_Restuarant">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="Resturant_food" EntitySet="Resturant_food" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_food_Restuarant" Association="foodAppModel.Store.FK_user_food_Restuarant">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="user_food" EntitySet="user_food" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_food_Resturant_food1" Association="foodAppModel.Store.FK_user_food_Resturant_food1">
+      <End Role="Resturant_food" EntitySet="Resturant_food" />
+      <End Role="user_food" EntitySet="user_food" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_food_User_acc1" Association="foodAppModel.Store.FK_user_food_User_acc1">
+      <End Role="User_acc" EntitySet="User_acc" />
+      <End Role="user_food" EntitySet="user_food" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_rest_Restuarant" Association="foodAppModel.Store.FK_user_rest_Restuarant">
+      <End Role="Restuarant" EntitySet="Restuarant" />
+      <End Role="user_rest" EntitySet="user_rest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_user_rest_User_acc" Association="foodAppModel.Store.FK_user_rest_User_acc">
+      <End Role="User_acc" EntitySet="User_acc" />
+      <End Role="user_rest" EntitySet="user_rest" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Restuarant">
+    <Key>
+      <PropertyRef Name="RID" />
+    </Key>
+    <Property Name="RID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Resturant_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="average_rating" Type="float" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="restuarant_tag">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="tag" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Resturant_food">
+    <Key>
+      <PropertyRef Name="FID" />
+    </Key>
+    <Property Name="RID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="food" Type="nvarchar" MaxLength="50" />
+    <Property Name="spicy_rating" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User_acc">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="user_food">
+    <Key>
+      <PropertyRef Name="UFID" />
+    </Key>
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="FID" Type="uniqueidentifier" />
+    <Property Name="rating" Type="float" />
+    <Property Name="review" Type="nvarchar(max)" />
+    <Property Name="RID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UFID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_rest">
+    <Key>
+      <PropertyRef Name="URID" />
+    </Key>
+    <Property Name="number" Type="int" Nullable="false" />
+    <Property Name="RID" Type="uniqueidentifier" />
+    <Property Name="rating" Type="float" />
+    <Property Name="review" Type="nvarchar(max)" />
+    <Property Name="URID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_restuarant_tag_Restuarant">
+    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
+    <End Role="restuarant_tag" Type="foodAppModel.Store.restuarant_tag" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="RID" />
+      </Principal>
+      <Dependent Role="restuarant_tag">
+        <PropertyRef Name="RID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resturant_food_Restuarant">
+    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
+    <End Role="Resturant_food" Type="foodAppModel.Store.Resturant_food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="RID" />
+      </Principal>
+      <Dependent Role="Resturant_food">
+        <PropertyRef Name="RID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_food_Restuarant">
+    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
+    <End Role="user_food" Type="foodAppModel.Store.user_food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="RID" />
+      </Principal>
+      <Dependent Role="user_food">
+        <PropertyRef Name="RID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_food_Resturant_food1">
+    <End Role="Resturant_food" Type="foodAppModel.Store.Resturant_food" Multiplicity="0..1" />
+    <End Role="user_food" Type="foodAppModel.Store.user_food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resturant_food">
+        <PropertyRef Name="FID" />
+      </Principal>
+      <Dependent Role="user_food">
+        <PropertyRef Name="FID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_food_User_acc1">
+    <End Role="User_acc" Type="foodAppModel.Store.User_acc" Multiplicity="1" />
+    <End Role="user_food" Type="foodAppModel.Store.user_food" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_acc">
+        <PropertyRef Name="number" />
+      </Principal>
+      <Dependent Role="user_food">
+        <PropertyRef Name="number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_rest_Restuarant">
+    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="0..1" />
+    <End Role="user_rest" Type="foodAppModel.Store.user_rest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Restuarant">
+        <PropertyRef Name="RID" />
+      </Principal>
+      <Dependent Role="user_rest">
+        <PropertyRef Name="RID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_user_rest_User_acc">
+    <End Role="User_acc" Type="foodAppModel.Store.User_acc" Multiplicity="1" />
+    <End Role="user_rest" Type="foodAppModel.Store.user_rest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_acc">
+        <PropertyRef Name="number" />
+      </Principal>
+      <Dependent Role="user_rest">
+        <PropertyRef Name="number" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>
