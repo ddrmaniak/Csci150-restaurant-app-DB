@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "WindowsAzure1", "WindowsAzure1\WindowsAzure1.ccproj", "{4656B03B-0B07-4BA8-82B0-1D73AAA682ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "foodApp", "..\foodApp\foodApp.csproj", "{B586ECAB-A744-48EC-9418-C0BB41936A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4656B03B-0B07-4BA8-82B0-1D73AAA682ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4656B03B-0B07-4BA8-82B0-1D73AAA682ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4656B03B-0B07-4BA8-82B0-1D73AAA682ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4656B03B-0B07-4BA8-82B0-1D73AAA682ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B586ECAB-A744-48EC-9418-C0BB41936A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

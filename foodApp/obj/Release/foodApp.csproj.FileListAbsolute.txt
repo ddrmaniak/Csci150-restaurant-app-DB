@@ -1,0 +1,11 @@
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\foodApp.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\foodApp.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\System.Web.Mvc.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\System.Web.Mvc.xml
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Release\foodApp.csprojResolveAssemblyReference.cache
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Release\foodApp.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Release\foodApp.pdb
