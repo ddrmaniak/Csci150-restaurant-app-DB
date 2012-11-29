@@ -13,3 +13,10 @@ C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restauran
 C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\obj\Debug\ResolveAssemblyReference.cache
 C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\obj\Debug\FoodAppService.dll
 C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\obj\Debug\FoodAppService.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\obj\Debug\FoodAppService.csprojResolveAssemblyReference.cache
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\obj\Debug\FoodAppService.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\obj\Debug\FoodAppService.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\FoodAppService.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\FoodAppService.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\foodApp.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\foodApp.pdb

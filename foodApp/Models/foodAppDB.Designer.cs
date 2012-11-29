@@ -80,18 +80,18 @@ namespace foodApp.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<RestaurantEntity> RestaurantEntities
+        public ObjectSet<RestaurantEntity> RestaurantEntity
         {
             get
             {
-                if ((_RestaurantEntities == null))
+                if ((_RestaurantEntity == null))
                 {
-                    _RestaurantEntities = base.CreateObjectSet<RestaurantEntity>("RestaurantEntities");
+                    _RestaurantEntity = base.CreateObjectSet<RestaurantEntity>("RestaurantEntity");
                 }
-                return _RestaurantEntities;
+                return _RestaurantEntity;
             }
         }
-        private ObjectSet<RestaurantEntity> _RestaurantEntities;
+        private ObjectSet<RestaurantEntity> _RestaurantEntity;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -194,19 +194,19 @@ namespace foodApp.Models
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the RestaurantEntities EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the RestaurantEntity EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToRestaurantEntities(RestaurantEntity RestaurantEntity)
+        public void AddToRestaurantEntity(RestaurantEntity restaurantEntity)
         {
-            base.AddObject("RestaurantEntities", RestaurantEntity);
+            base.AddObject("RestaurantEntity", restaurantEntity);
         }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the Restaurant_tag EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToRestaurant_tag(Restaurant_tag Restaurant_tag)
+        public void AddToRestaurant_tag(Restaurant_tag restaurant_tag)
         {
-            base.AddObject("Restaurant_tag", Restaurant_tag);
+            base.AddObject("Restaurant_tag", restaurant_tag);
         }
     
         /// <summary>
@@ -275,11 +275,11 @@ namespace foodApp.Models
         /// <param name="id">Initial value of the ID property.</param>
         public static Restaurant_tag CreateRestaurant_tag(global::System.Guid rID, global::System.String tag, global::System.Guid id)
         {
-            Restaurant_tag Restaurant_tag = new Restaurant_tag();
-            Restaurant_tag.RID = rID;
-            Restaurant_tag.tag = tag;
-            Restaurant_tag.ID = id;
-            return Restaurant_tag;
+            Restaurant_tag restaurant_tag = new Restaurant_tag();
+            restaurant_tag.RID = rID;
+            restaurant_tag.tag = tag;
+            restaurant_tag.ID = id;
+            return restaurant_tag;
         }
 
         #endregion
@@ -424,9 +424,9 @@ namespace foodApp.Models
         /// <param name="rID">Initial value of the RID property.</param>
         public static RestaurantEntity CreateRestaurantEntity(global::System.Guid rID)
         {
-            RestaurantEntity RestaurantEntity = new RestaurantEntity();
-            RestaurantEntity.RID = rID;
-            return RestaurantEntity;
+            RestaurantEntity restaurantEntity = new RestaurantEntity();
+            restaurantEntity.RID = rID;
+            return restaurantEntity;
         }
 
         #endregion

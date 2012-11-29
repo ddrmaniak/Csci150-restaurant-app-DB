@@ -4,10 +4,19 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Web;
 using System.Data.SqlClient;
-using foodApp;
+using System.ComponentModel;
 using foodApp.Models;
+using foodApp;
 using foodApp.Controllers;
+using System.Data.Common;
+using System.Data.Objects;
+using System.Data.Objects.DataClasses;
+using System.Data.EntityModel;
+using System.Data.EntityClient;
+using System.Web.Mvc;
+using System.Data.Entity;
 namespace FoodAppService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "GetRestaurant" in code, svc and config file together.
@@ -16,15 +25,23 @@ namespace FoodAppService
         private int p;
         public List<Restaurant> getRestaurant()
         {
-            foodAppEntities context = new foodAppEntities();
-            List<RestaurantEntity> restaurantEntity = (from p in context.RestaurantEntities
-                                    select p).ToList();
-            if (restaurantEntity != null)
-                return TranslateRestaurantEntityToRestaurant(restaurantEntity);
+            var context = new foodAppEntities();
+            List<RestaurantEntity> restaurantEntity = context.RestaurantEntity.Select(n => n).ToList<RestaurantEntity>();/*(from p in context.RestaurantEntities
+                                    select p).ToList();*/
+            Restaurant temp;
+            List<Restaurant> rest = new List<Restaurant>();
+            foreach(var p in restaurantEntity)
+            {
+                temp = new Restaurant(p.RID, p.Resturant_name, p.address, p.average_rating, p.Notes, p.City, p.State);
+                rest.Add(temp);
+            }
+            context.Dispose();
+            if (rest/*restaurantEntity*/ != null)
+                return rest;//TranslateRestaurantEntityToRestaurant(restaurantEntity);
             else
                 throw new Exception("Invalid Product Id");
         }
-        private List<Restaurant> TranslateRestaurantEntityToRestaurant(List<RestaurantEntity> restaurantEntity)
+        /*private List<Restaurant> TranslateRestaurantEntityToRestaurant(List<foodApp.Models.RestaurantEntity> restaurantEntity)
         {
             List<Restaurant> rest = new List<Restaurant>();
             Restaurant temp;
@@ -34,7 +51,7 @@ namespace FoodAppService
                 rest.Add(temp);
             }
             return rest;
-        }
+        }*/
         /* public List<Restaurant> GetAllRestaurantMethod()
          {
              List<Restaurant> mylist = new List<Restaurant>();

@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="foodAppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="foodAppModelStoreContainer">
-    <EntitySet Name="Restuarant" EntityType="foodAppModel.Store.Restuarant" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="restuarant_tag" EntityType="foodAppModel.Store.restuarant_tag" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Restaurant" EntityType="foodAppModel.Store.Restaurant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Restaurant_tag" EntityType="foodAppModel.Store.Restaurant_tag" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Resturant_food" EntityType="foodAppModel.Store.Resturant_food" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="sysdiagrams" EntityType="foodAppModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="User_acc" EntityType="foodAppModel.Store.User_acc" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="user_food" EntityType="foodAppModel.Store.user_food" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="user_rest" EntityType="foodAppModel.Store.user_rest" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK_restuarant_tag_Restuarant" Association="foodAppModel.Store.FK_restuarant_tag_Restuarant">
-      <End Role="Restuarant" EntitySet="Restuarant" />
-      <End Role="restuarant_tag" EntitySet="restuarant_tag" />
+    <AssociationSet Name="FK_Restaurant_tag_Restaurant" Association="foodAppModel.Store.FK_Restaurant_tag_Restaurant">
+      <End Role="Restaurant" EntitySet="Restaurant" />
+      <End Role="Restaurant_tag" EntitySet="Restaurant_tag" />
     </AssociationSet>
-    <AssociationSet Name="FK_Resturant_food_Restuarant" Association="foodAppModel.Store.FK_Resturant_food_Restuarant">
-      <End Role="Restuarant" EntitySet="Restuarant" />
+    <AssociationSet Name="FK_Resturant_food_Restaurant" Association="foodAppModel.Store.FK_Resturant_food_Restaurant">
+      <End Role="Restaurant" EntitySet="Restaurant" />
       <End Role="Resturant_food" EntitySet="Resturant_food" />
     </AssociationSet>
-    <AssociationSet Name="FK_user_food_Restuarant" Association="foodAppModel.Store.FK_user_food_Restuarant">
-      <End Role="Restuarant" EntitySet="Restuarant" />
+    <AssociationSet Name="FK_user_food_Restaurant" Association="foodAppModel.Store.FK_user_food_Restaurant">
+      <End Role="Restaurant" EntitySet="Restaurant" />
       <End Role="user_food" EntitySet="user_food" />
     </AssociationSet>
     <AssociationSet Name="FK_user_food_Resturant_food1" Association="foodAppModel.Store.FK_user_food_Resturant_food1">
@@ -28,8 +28,8 @@
       <End Role="User_acc" EntitySet="User_acc" />
       <End Role="user_food" EntitySet="user_food" />
     </AssociationSet>
-    <AssociationSet Name="FK_user_rest_Restuarant" Association="foodAppModel.Store.FK_user_rest_Restuarant">
-      <End Role="Restuarant" EntitySet="Restuarant" />
+    <AssociationSet Name="FK_user_rest_Restaurant" Association="foodAppModel.Store.FK_user_rest_Restaurant">
+      <End Role="Restaurant" EntitySet="Restaurant" />
       <End Role="user_rest" EntitySet="user_rest" />
     </AssociationSet>
     <AssociationSet Name="FK_user_rest_User_acc" Association="foodAppModel.Store.FK_user_rest_User_acc">
@@ -37,7 +37,7 @@
       <End Role="user_rest" EntitySet="user_rest" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="Restuarant">
+  <EntityType Name="Restaurant">
     <Key>
       <PropertyRef Name="RID" />
     </Key>
@@ -49,7 +49,7 @@
     <Property Name="City" Type="nvarchar" MaxLength="50" />
     <Property Name="Notes" Type="nvarchar(max)" />
   </EntityType>
-  <EntityType Name="restuarant_tag">
+  <EntityType Name="Restaurant_tag">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
@@ -105,23 +105,23 @@
     <Property Name="review" Type="nvarchar(max)" />
     <Property Name="URID" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <Association Name="FK_restuarant_tag_Restuarant">
-    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
-    <End Role="restuarant_tag" Type="foodAppModel.Store.restuarant_tag" Multiplicity="*" />
+  <Association Name="FK_Restaurant_tag_Restaurant">
+    <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="1" />
+    <End Role="Restaurant_tag" Type="foodAppModel.Store.Restaurant_tag" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Restuarant">
+      <Principal Role="Restaurant">
         <PropertyRef Name="RID" />
       </Principal>
-      <Dependent Role="restuarant_tag">
+      <Dependent Role="Restaurant_tag">
         <PropertyRef Name="RID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Resturant_food_Restuarant">
-    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
+  <Association Name="FK_Resturant_food_Restaurant">
+    <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="1" />
     <End Role="Resturant_food" Type="foodAppModel.Store.Resturant_food" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Restuarant">
+      <Principal Role="Restaurant">
         <PropertyRef Name="RID" />
       </Principal>
       <Dependent Role="Resturant_food">
@@ -129,11 +129,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_user_food_Restuarant">
-    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
+  <Association Name="FK_user_food_Restaurant">
+    <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="1" />
     <End Role="user_food" Type="foodAppModel.Store.user_food" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Restuarant">
+      <Principal Role="Restaurant">
         <PropertyRef Name="RID" />
       </Principal>
       <Dependent Role="user_food">
@@ -165,11 +165,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_user_rest_Restuarant">
-    <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="0..1" />
+  <Association Name="FK_user_rest_Restaurant">
+    <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="0..1" />
     <End Role="user_rest" Type="foodAppModel.Store.user_rest" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Restuarant">
+      <Principal Role="Restaurant">
         <PropertyRef Name="RID" />
       </Principal>
       <Dependent Role="user_rest">
