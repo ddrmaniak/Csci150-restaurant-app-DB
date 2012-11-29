@@ -4,25 +4,25 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="foodAppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="foodAppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="foodAppModelStoreContainer">
-          <EntitySet Name="Restuarant" EntityType="foodAppModel.Store.Restuarant" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="restuarant_tag" EntityType="foodAppModel.Store.restuarant_tag" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Restaurant" EntityType="foodAppModel.Store.Restaurant" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Restaurant_tag" EntityType="foodAppModel.Store.Restaurant_tag" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Resturant_food" EntityType="foodAppModel.Store.Resturant_food" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="sysdiagrams" EntityType="foodAppModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="User_acc" EntityType="foodAppModel.Store.User_acc" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="user_food" EntityType="foodAppModel.Store.user_food" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="user_rest" EntityType="foodAppModel.Store.user_rest" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_restuarant_tag_Restuarant" Association="foodAppModel.Store.FK_restuarant_tag_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarant" />
-            <End Role="restuarant_tag" EntitySet="restuarant_tag" />
+          <AssociationSet Name="FK_Restaurant_tag_Restaurant" Association="foodAppModel.Store.FK_Restaurant_tag_Restaurant">
+            <End Role="Restaurant" EntitySet="Restaurant" />
+            <End Role="Restaurant_tag" EntitySet="Restaurant_tag" />
           </AssociationSet>
-          <AssociationSet Name="FK_Resturant_food_Restuarant" Association="foodAppModel.Store.FK_Resturant_food_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarant" />
+          <AssociationSet Name="FK_Resturant_food_Restaurant" Association="foodAppModel.Store.FK_Resturant_food_Restaurant">
+            <End Role="Restaurant" EntitySet="Restaurant" />
             <End Role="Resturant_food" EntitySet="Resturant_food" />
           </AssociationSet>
-          <AssociationSet Name="FK_user_food_Restuarant" Association="foodAppModel.Store.FK_user_food_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarant" />
+          <AssociationSet Name="FK_user_food_Restaurant" Association="foodAppModel.Store.FK_user_food_Restaurant">
+            <End Role="Restaurant" EntitySet="Restaurant" />
             <End Role="user_food" EntitySet="user_food" />
           </AssociationSet>
           <AssociationSet Name="FK_user_food_Resturant_food1" Association="foodAppModel.Store.FK_user_food_Resturant_food1">
@@ -33,8 +33,8 @@
             <End Role="User_acc" EntitySet="User_acc" />
             <End Role="user_food" EntitySet="user_food" />
           </AssociationSet>
-          <AssociationSet Name="FK_user_rest_Restuarant" Association="foodAppModel.Store.FK_user_rest_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarant" />
+          <AssociationSet Name="FK_user_rest_Restaurant" Association="foodAppModel.Store.FK_user_rest_Restaurant">
+            <End Role="Restaurant" EntitySet="Restaurant" />
             <End Role="user_rest" EntitySet="user_rest" />
           </AssociationSet>
           <AssociationSet Name="FK_user_rest_User_acc" Association="foodAppModel.Store.FK_user_rest_User_acc">
@@ -42,7 +42,7 @@
             <End Role="user_rest" EntitySet="user_rest" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Restuarant">
+        <EntityType Name="Restaurant">
           <Key>
             <PropertyRef Name="RID" />
           </Key>
@@ -54,7 +54,7 @@
           <Property Name="City" Type="nvarchar" MaxLength="50" />
           <Property Name="Notes" Type="nvarchar(max)" />
         </EntityType>
-        <EntityType Name="restuarant_tag">
+        <EntityType Name="Restaurant_tag">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
@@ -85,7 +85,7 @@
           <Key>
             <PropertyRef Name="number" />
           </Key>
-          <Property Name="number" Type="int" Nullable="false" />
+          <Property Name="number" Type="bigint" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="password" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -93,7 +93,7 @@
           <Key>
             <PropertyRef Name="UFID" />
           </Key>
-          <Property Name="number" Type="int" Nullable="false" />
+          <Property Name="number" Type="bigint" Nullable="false" />
           <Property Name="FID" Type="uniqueidentifier" />
           <Property Name="rating" Type="float" />
           <Property Name="review" Type="nvarchar(max)" />
@@ -104,29 +104,29 @@
           <Key>
             <PropertyRef Name="URID" />
           </Key>
-          <Property Name="number" Type="int" Nullable="false" />
+          <Property Name="number" Type="bigint" Nullable="false" />
           <Property Name="RID" Type="uniqueidentifier" />
           <Property Name="rating" Type="float" />
           <Property Name="review" Type="nvarchar(max)" />
           <Property Name="URID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
-        <Association Name="FK_restuarant_tag_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
-          <End Role="restuarant_tag" Type="foodAppModel.Store.restuarant_tag" Multiplicity="*" />
+        <Association Name="FK_Restaurant_tag_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="1" />
+          <End Role="Restaurant_tag" Type="foodAppModel.Store.Restaurant_tag" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
-            <Dependent Role="restuarant_tag">
+            <Dependent Role="Restaurant_tag">
               <PropertyRef Name="RID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Resturant_food_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
+        <Association Name="FK_Resturant_food_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="1" />
           <End Role="Resturant_food" Type="foodAppModel.Store.Resturant_food" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
             <Dependent Role="Resturant_food">
@@ -134,11 +134,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_user_food_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="1" />
+        <Association Name="FK_user_food_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="1" />
           <End Role="user_food" Type="foodAppModel.Store.user_food" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
             <Dependent Role="user_food">
@@ -170,11 +170,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_user_rest_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Store.Restuarant" Multiplicity="0..1" />
+        <Association Name="FK_user_rest_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.Store.Restaurant" Multiplicity="0..1" />
           <End Role="user_rest" Type="foodAppModel.Store.user_rest" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
             <Dependent Role="user_rest">
@@ -225,33 +225,32 @@
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="foodAppModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="foodAppEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Restuarants" EntityType="foodAppModel.Restuarant" />
-          <EntitySet Name="restuarant_tag" EntityType="foodAppModel.restuarant_tag" />
+          <EntitySet Name="RestaurantEntities" EntityType="foodAppModel.RestaurantEntity" />
+          <EntitySet Name="Restaurant_tag" EntityType="foodAppModel.Restaurant_tag" />
           <EntitySet Name="Resturant_food" EntityType="foodAppModel.Resturant_food" />
           <EntitySet Name="sysdiagrams" EntityType="foodAppModel.sysdiagram" />
           <EntitySet Name="User_acc" EntityType="foodAppModel.User_acc" />
           <EntitySet Name="user_food" EntityType="foodAppModel.user_food" />
           <EntitySet Name="user_rest" EntityType="foodAppModel.user_rest" />
-          <AssociationSet Name="FK_restuarant_tag_Restuarant" Association="foodAppModel.FK_restuarant_tag_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarants" />
-            <End Role="restuarant_tag" EntitySet="restuarant_tag" />
+          <AssociationSet Name="FK_Restaurant_tag_Restaurant" Association="foodAppModel.FK_Restaurant_tag_Restaurant">
+            <End Role="Restaurant" EntitySet="RestaurantEntities" />
+            <End Role="Restaurant_tag" EntitySet="Restaurant_tag" />
           </AssociationSet>
-          <AssociationSet Name="FK_Resturant_food_Restuarant" Association="foodAppModel.FK_Resturant_food_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarants" />
+          <AssociationSet Name="FK_Resturant_food_Restaurant" Association="foodAppModel.FK_Resturant_food_Restaurant">
+            <End Role="Restaurant" EntitySet="RestaurantEntities" />
             <End Role="Resturant_food" EntitySet="Resturant_food" />
           </AssociationSet>
-          <AssociationSet Name="FK_user_food_Restuarant" Association="foodAppModel.FK_user_food_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarants" />
+          <AssociationSet Name="FK_user_food_Restaurant" Association="foodAppModel.FK_user_food_Restaurant">
+            <End Role="Restaurant" EntitySet="RestaurantEntities" />
             <End Role="user_food" EntitySet="user_food" />
           </AssociationSet>
-          <AssociationSet Name="FK_user_rest_Restuarant" Association="foodAppModel.FK_user_rest_Restuarant">
-            <End Role="Restuarant" EntitySet="Restuarants" />
+          <AssociationSet Name="FK_user_rest_Restaurant" Association="foodAppModel.FK_user_rest_Restaurant">
+            <End Role="Restaurant" EntitySet="RestaurantEntities" />
             <End Role="user_rest" EntitySet="user_rest" />
           </AssociationSet>
           <AssociationSet Name="FK_user_food_Resturant_food1" Association="foodAppModel.FK_user_food_Resturant_food1">
@@ -267,7 +266,7 @@
             <End Role="user_rest" EntitySet="user_rest" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="Restuarant">
+        <EntityType Name="RestaurantEntity">
           <Key>
             <PropertyRef Name="RID" />
           </Key>
@@ -278,19 +277,19 @@
           <Property Name="State" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="restuarant_tag" Relationship="foodAppModel.FK_restuarant_tag_Restuarant" FromRole="Restuarant" ToRole="restuarant_tag" />
-          <NavigationProperty Name="Resturant_food" Relationship="foodAppModel.FK_Resturant_food_Restuarant" FromRole="Restuarant" ToRole="Resturant_food" />
-          <NavigationProperty Name="user_food" Relationship="foodAppModel.FK_user_food_Restuarant" FromRole="Restuarant" ToRole="user_food" />
-          <NavigationProperty Name="user_rest" Relationship="foodAppModel.FK_user_rest_Restuarant" FromRole="Restuarant" ToRole="user_rest" />
+          <NavigationProperty Name="Restaurant_tag" Relationship="foodAppModel.FK_Restaurant_tag_Restaurant" FromRole="Restaurant" ToRole="Restaurant_tag" />
+          <NavigationProperty Name="Resturant_food" Relationship="foodAppModel.FK_Resturant_food_Restaurant" FromRole="Restaurant" ToRole="Resturant_food" />
+          <NavigationProperty Name="user_food" Relationship="foodAppModel.FK_user_food_Restaurant" FromRole="Restaurant" ToRole="user_food" />
+          <NavigationProperty Name="user_rest" Relationship="foodAppModel.FK_user_rest_Restaurant" FromRole="Restaurant" ToRole="user_rest" />
         </EntityType>
-        <EntityType Name="restuarant_tag">
+        <EntityType Name="Restaurant_tag">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="RID" Type="Guid" Nullable="false" />
           <Property Name="tag" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="ID" Type="Guid" Nullable="false" />
-          <NavigationProperty Name="Restuarant" Relationship="foodAppModel.FK_restuarant_tag_Restuarant" FromRole="restuarant_tag" ToRole="Restuarant" />
+          <NavigationProperty Name="Restaurant" Relationship="foodAppModel.FK_Restaurant_tag_Restaurant" FromRole="Restaurant_tag" ToRole="Restaurant" />
         </EntityType>
         <EntityType Name="Resturant_food">
           <Key>
@@ -300,7 +299,7 @@
           <Property Name="FID" Type="Guid" Nullable="false" />
           <Property Name="food" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="spicy_rating" Type="Int32" />
-          <NavigationProperty Name="Restuarant" Relationship="foodAppModel.FK_Resturant_food_Restuarant" FromRole="Resturant_food" ToRole="Restuarant" />
+          <NavigationProperty Name="Restaurant" Relationship="foodAppModel.FK_Resturant_food_Restaurant" FromRole="Resturant_food" ToRole="Restaurant" />
           <NavigationProperty Name="user_food" Relationship="foodAppModel.FK_user_food_Resturant_food1" FromRole="Resturant_food" ToRole="user_food" />
         </EntityType>
         <EntityType Name="sysdiagram">
@@ -317,7 +316,7 @@
           <Key>
             <PropertyRef Name="number" />
           </Key>
-          <Property Name="number" Type="Int32" Nullable="false" />
+          <Property Name="number" Type="Int64" Nullable="false" />
           <Property Name="name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="user_food" Relationship="foodAppModel.FK_user_food_User_acc1" FromRole="User_acc" ToRole="user_food" />
@@ -327,13 +326,13 @@
           <Key>
             <PropertyRef Name="UFID" />
           </Key>
-          <Property Name="number" Type="Int32" Nullable="false" />
+          <Property Name="number" Type="Int64" Nullable="false" />
           <Property Name="FID" Type="Guid" />
           <Property Name="rating" Type="Double" />
           <Property Name="review" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="RID" Type="Guid" Nullable="false" />
           <Property Name="UFID" Type="Guid" Nullable="false" />
-          <NavigationProperty Name="Restuarant" Relationship="foodAppModel.FK_user_food_Restuarant" FromRole="user_food" ToRole="Restuarant" />
+          <NavigationProperty Name="Restaurant" Relationship="foodAppModel.FK_user_food_Restaurant" FromRole="user_food" ToRole="Restaurant" />
           <NavigationProperty Name="Resturant_food" Relationship="foodAppModel.FK_user_food_Resturant_food1" FromRole="user_food" ToRole="Resturant_food" />
           <NavigationProperty Name="User_acc" Relationship="foodAppModel.FK_user_food_User_acc1" FromRole="user_food" ToRole="User_acc" />
         </EntityType>
@@ -341,31 +340,31 @@
           <Key>
             <PropertyRef Name="URID" />
           </Key>
-          <Property Name="number" Type="Int32" Nullable="false" />
+          <Property Name="number" Type="Int64" Nullable="false" />
           <Property Name="RID" Type="Guid" />
           <Property Name="rating" Type="Double" />
           <Property Name="review" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="URID" Type="Guid" Nullable="false" />
-          <NavigationProperty Name="Restuarant" Relationship="foodAppModel.FK_user_rest_Restuarant" FromRole="user_rest" ToRole="Restuarant" />
+          <NavigationProperty Name="Restaurant" Relationship="foodAppModel.FK_user_rest_Restaurant" FromRole="user_rest" ToRole="Restaurant" />
           <NavigationProperty Name="User_acc" Relationship="foodAppModel.FK_user_rest_User_acc" FromRole="user_rest" ToRole="User_acc" />
         </EntityType>
-        <Association Name="FK_restuarant_tag_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Restuarant" Multiplicity="1" />
-          <End Role="restuarant_tag" Type="foodAppModel.restuarant_tag" Multiplicity="*" />
+        <Association Name="FK_Restaurant_tag_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.RestaurantEntity" Multiplicity="1" />
+          <End Role="Restaurant_tag" Type="foodAppModel.Restaurant_tag" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
-            <Dependent Role="restuarant_tag">
+            <Dependent Role="Restaurant_tag">
               <PropertyRef Name="RID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Resturant_food_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Restuarant" Multiplicity="1" />
+        <Association Name="FK_Resturant_food_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.RestaurantEntity" Multiplicity="1" />
           <End Role="Resturant_food" Type="foodAppModel.Resturant_food" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
             <Dependent Role="Resturant_food">
@@ -373,11 +372,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_user_food_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Restuarant" Multiplicity="1" />
+        <Association Name="FK_user_food_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.RestaurantEntity" Multiplicity="1" />
           <End Role="user_food" Type="foodAppModel.user_food" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
             <Dependent Role="user_food">
@@ -385,11 +384,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_user_rest_Restuarant">
-          <End Role="Restuarant" Type="foodAppModel.Restuarant" Multiplicity="0..1" />
+        <Association Name="FK_user_rest_Restaurant">
+          <End Role="Restaurant" Type="foodAppModel.RestaurantEntity" Multiplicity="0..1" />
           <End Role="user_rest" Type="foodAppModel.user_rest" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Restuarant">
+            <Principal Role="Restaurant">
               <PropertyRef Name="RID" />
             </Principal>
             <Dependent Role="user_rest">
@@ -439,9 +438,9 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="foodAppModelStoreContainer" CdmEntityContainer="foodAppEntities">
-          <EntitySetMapping Name="Restuarants">
-            <EntityTypeMapping TypeName="foodAppModel.Restuarant">
-              <MappingFragment StoreEntitySet="Restuarant">
+          <EntitySetMapping Name="RestaurantEntities">
+            <EntityTypeMapping TypeName="foodAppModel.RestaurantEntity">
+              <MappingFragment StoreEntitySet="Restaurant">
                 <ScalarProperty Name="RID" ColumnName="RID" />
                 <ScalarProperty Name="Resturant_name" ColumnName="Resturant_name" />
                 <ScalarProperty Name="address" ColumnName="address" />
@@ -452,9 +451,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="restuarant_tag">
-            <EntityTypeMapping TypeName="foodAppModel.restuarant_tag">
-              <MappingFragment StoreEntitySet="restuarant_tag">
+          <EntitySetMapping Name="Restaurant_tag">
+            <EntityTypeMapping TypeName="foodAppModel.Restaurant_tag">
+              <MappingFragment StoreEntitySet="Restaurant_tag">
                 <ScalarProperty Name="RID" ColumnName="RID" />
                 <ScalarProperty Name="tag" ColumnName="tag" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -534,27 +533,27 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="foodAppDB">
-        <EntityTypeShape EntityType="foodAppModel.Restuarant" Width="1.5" PointX="0.75" PointY="5.125" Height="3.1340950520833326" IsExpanded="true" />
-        <EntityTypeShape EntityType="foodAppModel.restuarant_tag" Width="1.5" PointX="3" PointY="4.375" Height="1.7879850260416674" IsExpanded="true" />
+      <Diagram Name="foodAppDB" ZoomLevel="96">
+        <EntityTypeShape EntityType="foodAppModel.RestaurantEntity" Width="1.5" PointX="0.75" PointY="5.125" Height="3.1340950520833326" IsExpanded="true" />
+        <EntityTypeShape EntityType="foodAppModel.Restaurant_tag" Width="1.5" PointX="3" PointY="4.375" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="foodAppModel.Resturant_food" Width="1.5" PointX="3" PointY="6.875" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="foodAppModel.sysdiagram" Width="1.5" PointX="7.75" PointY="6" Height="1.9802864583333335" IsExpanded="true" />
         <EntityTypeShape EntityType="foodAppModel.User_acc" Width="1.5" PointX="3.75" PointY="0.75" Height="1.9802864583333317" IsExpanded="true" />
         <EntityTypeShape EntityType="foodAppModel.user_food" Width="1.5" PointX="5.25" PointY="5.75" Height="2.7494921874999996" IsExpanded="true" />
         <EntityTypeShape EntityType="foodAppModel.user_rest" Width="1.5" PointX="6" PointY="2.5" Height="2.3648893229166674" IsExpanded="true" />
-        <AssociationConnector Association="foodAppModel.FK_restuarant_tag_Restuarant" ManuallyRouted="false">
+        <AssociationConnector Association="foodAppModel.FK_Restaurant_tag_Restaurant" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="5.6439925130208337" />
           <ConnectorPoint PointX="3" PointY="5.6439925130208337" />
         </AssociationConnector>
-        <AssociationConnector Association="foodAppModel.FK_Resturant_food_Restuarant" ManuallyRouted="false">
+        <AssociationConnector Association="foodAppModel.FK_Resturant_food_Restaurant" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="7.5670475260416659" />
           <ConnectorPoint PointX="3" PointY="7.5670475260416659" />
         </AssociationConnector>
-        <AssociationConnector Association="foodAppModel.FK_user_food_Restuarant" ManuallyRouted="false">
+        <AssociationConnector Association="foodAppModel.FK_user_food_Restaurant" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="6.5189925130208337" />
           <ConnectorPoint PointX="5.25" PointY="6.5189925130208337" />
         </AssociationConnector>
-        <AssociationConnector Association="foodAppModel.FK_user_rest_Restuarant" ManuallyRouted="false">
+        <AssociationConnector Association="foodAppModel.FK_user_rest_Restaurant" ManuallyRouted="false">
           <ConnectorPoint PointX="1.5" PointY="5.125" />
           <ConnectorPoint PointX="1.5" PointY="3.5526432291666659" />
           <ConnectorPoint PointX="4.791666666666667" PointY="3.5526432291666654" />

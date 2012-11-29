@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WindowsAzure1" generation="1" functional="0" release="0" Id="2ca2aae6-efba-47ce-888f-96cda229257e" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WindowsAzure1" generation="1" functional="0" release="0" Id="64e09269-1c68-408d-9367-93c2558f8055" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="WindowsAzure1Group" generation="1" functional="0" release="0">
       <componentports>
@@ -70,9 +70,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="13894aed-d929-4856-a80b-613788f4f0c0" ref="Microsoft.RedDog.Contract\ServiceContract\WindowsAzure1Contract@ServiceDefinition">
+    <implementation Id="d6185402-e6c3-4ccd-b85b-d5e28291741a" ref="Microsoft.RedDog.Contract\ServiceContract\WindowsAzure1Contract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="4b145ce6-898f-4181-9bfe-0b40e06542cc" ref="Microsoft.RedDog.Contract\Interface\foodApp:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="3a38c1ac-3bd9-4853-bc52-4c11d66d4dfd" ref="Microsoft.RedDog.Contract\Interface\foodApp:Endpoint1@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/WindowsAzure1/WindowsAzure1Group/foodApp:Endpoint1" />
           </inPort>

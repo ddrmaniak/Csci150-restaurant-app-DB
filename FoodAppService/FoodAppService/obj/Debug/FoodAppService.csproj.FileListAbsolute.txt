@@ -1,0 +1,15 @@
+c:\users\mehta\documents\visual studio 2010\Projects\FoodAppService\FoodAppService\bin\FoodAppService.dll
+c:\users\mehta\documents\visual studio 2010\Projects\FoodAppService\FoodAppService\bin\FoodAppService.pdb
+c:\users\mehta\documents\visual studio 2010\Projects\FoodAppService\FoodAppService\obj\Debug\ResolveAssemblyReference.cache
+c:\users\mehta\documents\visual studio 2010\Projects\FoodAppService\FoodAppService\obj\Debug\FoodAppService.dll
+c:\users\mehta\documents\visual studio 2010\Projects\FoodAppService\FoodAppService\obj\Debug\FoodAppService.pdb
+C:\Users\Mehta\Desktop\FoodAppService\FoodAppService\bin\FoodAppService.dll
+C:\Users\Mehta\Desktop\FoodAppService\FoodAppService\bin\FoodAppService.pdb
+C:\Users\Mehta\Desktop\FoodAppService\FoodAppService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mehta\Desktop\FoodAppService\FoodAppService\obj\Debug\FoodAppService.dll
+C:\Users\Mehta\Desktop\FoodAppService\FoodAppService\obj\Debug\FoodAppService.pdb
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\bin\FoodAppService.dll
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\bin\FoodAppService.pdb
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\obj\Debug\ResolveAssemblyReference.cache
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\obj\Debug\FoodAppService.dll
+C:\Program Files (x86)\GitExtensions\Csci150-restaurant-app-DB\Csci150-restaurant-app-DB\FoodAppService\FoodAppService\obj\Debug\FoodAppService.pdb

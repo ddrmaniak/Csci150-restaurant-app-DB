@@ -87,7 +87,7 @@
     <Key>
       <PropertyRef Name="number" />
     </Key>
-    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="number" Type="Int64" Nullable="false" />
     <Property Name="name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <Property Name="password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="user_food" Relationship="foodAppModel.FK_user_food_User_acc1" FromRole="User_acc" ToRole="user_food" />
@@ -97,7 +97,7 @@
     <Key>
       <PropertyRef Name="UFID" />
     </Key>
-    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="number" Type="Int64" Nullable="false" />
     <Property Name="FID" Type="Guid" />
     <Property Name="rating" Type="Double" />
     <Property Name="review" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
@@ -111,7 +111,7 @@
     <Key>
       <PropertyRef Name="URID" />
     </Key>
-    <Property Name="number" Type="Int32" Nullable="false" />
+    <Property Name="number" Type="Int64" Nullable="false" />
     <Property Name="RID" Type="Guid" />
     <Property Name="rating" Type="Double" />
     <Property Name="review" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
