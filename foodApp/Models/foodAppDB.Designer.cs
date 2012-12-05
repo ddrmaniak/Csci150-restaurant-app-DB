@@ -20,10 +20,10 @@ using System.Xml.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("foodAppModel", "FK_Restaurant_tag_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "Restaurant_tag", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.Restaurant_tag), true)]
-[assembly: EdmRelationshipAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "Resturant_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.Resturant_food), true)]
+[assembly: EdmRelationshipAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "Resturant_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.Restaurant_food), true)]
 [assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
 [assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_rest_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(foodApp.Models.RestaurantEntity), "user_rest", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_rest), true)]
-[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_Resturant_food1", "Resturant_food", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(foodApp.Models.Resturant_food), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
+[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_Resturant_food1", "Resturant_food", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(foodApp.Models.Restaurant_food), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
 [assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_User_acc1", "User_acc", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.User_acc), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
 [assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_rest_User_acc", "User_acc", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.User_acc), "user_rest", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_rest), true)]
 
@@ -112,18 +112,18 @@ namespace foodApp.Models
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Resturant_food> Resturant_food
+        public ObjectSet<Restaurant_food> Restaurant_food
         {
             get
             {
-                if ((_Resturant_food == null))
+                if ((_Restaurant_food == null))
                 {
-                    _Resturant_food = base.CreateObjectSet<Resturant_food>("Resturant_food");
+                    _Restaurant_food = base.CreateObjectSet<Restaurant_food>("Restaurant_food");
                 }
-                return _Resturant_food;
+                return _Restaurant_food;
             }
         }
-        private ObjectSet<Resturant_food> _Resturant_food;
+        private ObjectSet<Restaurant_food> _Restaurant_food;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -210,11 +210,11 @@ namespace foodApp.Models
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Resturant_food EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Restaurant_food EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToResturant_food(Resturant_food resturant_food)
+        public void AddToRestaurant_food(Restaurant_food restaurant_food)
         {
-            base.AddObject("Resturant_food", resturant_food);
+            base.AddObject("Restaurant_food", restaurant_food);
         }
     
         /// <summary>
@@ -256,6 +256,201 @@ namespace foodApp.Models
     #endregion
 
     #region Entities
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="foodAppModel", Name="Restaurant_food")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Restaurant_food : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Restaurant_food object.
+        /// </summary>
+        /// <param name="rID">Initial value of the RID property.</param>
+        /// <param name="fID">Initial value of the FID property.</param>
+        public static Restaurant_food CreateRestaurant_food(global::System.Guid rID, global::System.Guid fID)
+        {
+            Restaurant_food restaurant_food = new Restaurant_food();
+            restaurant_food.RID = rID;
+            restaurant_food.FID = fID;
+            return restaurant_food;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid RID
+        {
+            get
+            {
+                return _RID;
+            }
+            set
+            {
+                OnRIDChanging(value);
+                ReportPropertyChanging("RID");
+                _RID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("RID");
+                OnRIDChanged();
+            }
+        }
+        private global::System.Guid _RID;
+        partial void OnRIDChanging(global::System.Guid value);
+        partial void OnRIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Guid FID
+        {
+            get
+            {
+                return _FID;
+            }
+            set
+            {
+                if (_FID != value)
+                {
+                    OnFIDChanging(value);
+                    ReportPropertyChanging("FID");
+                    _FID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("FID");
+                    OnFIDChanged();
+                }
+            }
+        }
+        private global::System.Guid _FID;
+        partial void OnFIDChanging(global::System.Guid value);
+        partial void OnFIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String food
+        {
+            get
+            {
+                return _food;
+            }
+            set
+            {
+                OnfoodChanging(value);
+                ReportPropertyChanging("food");
+                _food = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("food");
+                OnfoodChanged();
+            }
+        }
+        private global::System.String _food;
+        partial void OnfoodChanging(global::System.String value);
+        partial void OnfoodChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> spicy_rating
+        {
+            get
+            {
+                return _spicy_rating;
+            }
+            set
+            {
+                Onspicy_ratingChanging(value);
+                ReportPropertyChanging("spicy_rating");
+                _spicy_rating = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("spicy_rating");
+                Onspicy_ratingChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _spicy_rating;
+        partial void Onspicy_ratingChanging(Nullable<global::System.Int32> value);
+        partial void Onspicy_ratingChanged();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Restaurant")]
+        public RestaurantEntity Restaurant
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<RestaurantEntity> RestaurantReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Resturant_food1", "user_food")]
+        public EntityCollection<user_food> user_food
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food1", "user_food");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food1", "user_food", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
     
     /// <summary>
     /// No Metadata Documentation available.
@@ -465,24 +660,24 @@ namespace foodApp.Models
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Resturant_name
+        public global::System.String Restaurant_name
         {
             get
             {
-                return _Resturant_name;
+                return _Restaurant_name;
             }
             set
             {
-                OnResturant_nameChanging(value);
-                ReportPropertyChanging("Resturant_name");
-                _Resturant_name = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("Resturant_name");
-                OnResturant_nameChanged();
+                OnRestaurant_nameChanging(value);
+                ReportPropertyChanging("Restaurant_name");
+                _Restaurant_name = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Restaurant_name");
+                OnRestaurant_nameChanged();
             }
         }
-        private global::System.String _Resturant_name;
-        partial void OnResturant_nameChanging(global::System.String value);
-        partial void OnResturant_nameChanged();
+        private global::System.String _Restaurant_name;
+        partial void OnRestaurant_nameChanging(global::System.String value);
+        partial void OnRestaurant_nameChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -638,17 +833,17 @@ namespace foodApp.Models
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Resturant_food")]
-        public EntityCollection<Resturant_food> Resturant_food
+        public EntityCollection<Restaurant_food> Restaurant_food
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Resturant_food>("foodAppModel.FK_Resturant_food_Restaurant", "Resturant_food");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Restaurant_food>("foodAppModel.FK_Resturant_food_Restaurant", "Resturant_food");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Resturant_food>("foodAppModel.FK_Resturant_food_Restaurant", "Resturant_food", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Restaurant_food>("foodAppModel.FK_Resturant_food_Restaurant", "Resturant_food", value);
                 }
             }
         }
@@ -693,201 +888,6 @@ namespace foodApp.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_rest>("foodAppModel.FK_user_rest_Restaurant", "user_rest", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="foodAppModel", Name="Resturant_food")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Resturant_food : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new Resturant_food object.
-        /// </summary>
-        /// <param name="rID">Initial value of the RID property.</param>
-        /// <param name="fID">Initial value of the FID property.</param>
-        public static Resturant_food CreateResturant_food(global::System.Guid rID, global::System.Guid fID)
-        {
-            Resturant_food resturant_food = new Resturant_food();
-            resturant_food.RID = rID;
-            resturant_food.FID = fID;
-            return resturant_food;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid RID
-        {
-            get
-            {
-                return _RID;
-            }
-            set
-            {
-                OnRIDChanging(value);
-                ReportPropertyChanging("RID");
-                _RID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("RID");
-                OnRIDChanged();
-            }
-        }
-        private global::System.Guid _RID;
-        partial void OnRIDChanging(global::System.Guid value);
-        partial void OnRIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Guid FID
-        {
-            get
-            {
-                return _FID;
-            }
-            set
-            {
-                if (_FID != value)
-                {
-                    OnFIDChanging(value);
-                    ReportPropertyChanging("FID");
-                    _FID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("FID");
-                    OnFIDChanged();
-                }
-            }
-        }
-        private global::System.Guid _FID;
-        partial void OnFIDChanging(global::System.Guid value);
-        partial void OnFIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String food
-        {
-            get
-            {
-                return _food;
-            }
-            set
-            {
-                OnfoodChanging(value);
-                ReportPropertyChanging("food");
-                _food = StructuralObject.SetValidValue(value, true);
-                ReportPropertyChanged("food");
-                OnfoodChanged();
-            }
-        }
-        private global::System.String _food;
-        partial void OnfoodChanging(global::System.String value);
-        partial void OnfoodChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> spicy_rating
-        {
-            get
-            {
-                return _spicy_rating;
-            }
-            set
-            {
-                Onspicy_ratingChanging(value);
-                ReportPropertyChanging("spicy_rating");
-                _spicy_rating = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("spicy_rating");
-                Onspicy_ratingChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _spicy_rating;
-        partial void Onspicy_ratingChanging(Nullable<global::System.Int32> value);
-        partial void Onspicy_ratingChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Restaurant")]
-        public RestaurantEntity Restaurant
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<RestaurantEntity> RestaurantReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Resturant_food1", "user_food")]
-        public EntityCollection<user_food> user_food
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food1", "user_food");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food1", "user_food", value);
                 }
             }
         }
@@ -1432,15 +1432,15 @@ namespace foodApp.Models
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Resturant_food1", "Resturant_food")]
-        public Resturant_food Resturant_food
+        public Restaurant_food Resturant_food
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Resturant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Resturant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food").Value = value;
             }
         }
         /// <summary>
@@ -1448,17 +1448,17 @@ namespace foodApp.Models
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Resturant_food> Resturant_foodReference
+        public EntityReference<Restaurant_food> Resturant_foodReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Resturant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Resturant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food", value);
                 }
             }
         }

@@ -20,3 +20,7 @@ C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\F
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\FoodAppService.pdb
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\foodApp.dll
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\foodApp.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\FoodAppService\FoodAppService\bin\Microsoft.WindowsAzure.Diagnostics.xml

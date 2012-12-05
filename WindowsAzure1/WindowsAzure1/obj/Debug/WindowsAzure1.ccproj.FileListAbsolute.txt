@@ -1,10 +1,2 @@
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\bin\Debug\ServiceConfiguration.cscfg
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\bin\Debug\ServiceDefinition.csdef
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\foodApp.dll
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\foodApp.pdb
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\Microsoft.WindowsAzure.Configuration.dll
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\Microsoft.WindowsAzure.Diagnostics.dll
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\Microsoft.WindowsAzure.Diagnostics.xml
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\Microsoft.WindowsAzure.StorageClient.dll
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\System.Web.Mvc.dll
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\WindowsAzure1\WindowsAzure1\obj\Debug\foodApp\bin\System.Web.Mvc.xml

@@ -5,7 +5,7 @@
       <EntityTypeMapping TypeName="foodAppModel.RestaurantEntity">
         <MappingFragment StoreEntitySet="Restaurant">
           <ScalarProperty Name="RID" ColumnName="RID" />
-          <ScalarProperty Name="Resturant_name" ColumnName="Resturant_name" />
+          <ScalarProperty Name="Restaurant_name" ColumnName="Resturant_name" />
           <ScalarProperty Name="address" ColumnName="address" />
           <ScalarProperty Name="average_rating" ColumnName="average_rating" />
           <ScalarProperty Name="State" ColumnName="State" />
@@ -23,8 +23,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Resturant_food">
-      <EntityTypeMapping TypeName="foodAppModel.Resturant_food">
+    <EntitySetMapping Name="Restaurant_food">
+      <EntityTypeMapping TypeName="foodAppModel.Restaurant_food">
         <MappingFragment StoreEntitySet="Resturant_food">
           <ScalarProperty Name="RID" ColumnName="RID" />
           <ScalarProperty Name="FID" ColumnName="FID" />

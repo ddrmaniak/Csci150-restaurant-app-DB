@@ -2,5 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActivePublishProfile>150GroupBProduction</ActivePublishProfile>
+    <RemoteDesktopMoreOptions>True</RemoteDesktopMoreOptions>
   </PropertyGroup>
 </Project>

@@ -6,6 +6,6 @@ C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\Micr
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\System.Web.Mvc.dll
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\Microsoft.WindowsAzure.Diagnostics.xml
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\bin\System.Web.Mvc.xml
-C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Release\foodApp.csprojResolveAssemblyReference.cache
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Release\foodApp.dll
 C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Release\foodApp.pdb
+C:\Users\Inspiron\Documents\Visual Studio 2010\Projects\foodApp\foodApp\obj\Release\foodApp.csprojResolveAssemblyReference.cache

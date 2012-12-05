@@ -37,6 +37,14 @@
     <ServiceConfiguration Include="ServiceConfiguration.Cloud.cscfg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\FoodAppService\FoodAppService\FoodAppService.csproj">
+      <Name>FoodAppService</Name>
+      <Project>{4de6ee72-4a21-4312-b2d0-2ed72eae5c30}</Project>
+      <Private>True</Private>
+      <RoleType>Web</RoleType>
+      <RoleName>FoodAppService</RoleName>
+      <UpdateDiagnosticsConnectionStringOnPublish>True</UpdateDiagnosticsConnectionStringOnPublish>
+    </ProjectReference>
     <ProjectReference Include="..\..\foodApp\foodApp.csproj">
       <Name>foodApp</Name>
       <Project>{b586ecab-a744-48ec-9418-c0bb41936a22}</Project>
