@@ -19,13 +19,13 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("foodAppModel", "FK_Restaurant_tag_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "Restaurant_tag", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.Restaurant_tag), true)]
-[assembly: EdmRelationshipAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "Resturant_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.Restaurant_food), true)]
-[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
-[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_rest_Restaurant", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(foodApp.Models.RestaurantEntity), "user_rest", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_rest), true)]
-[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_Resturant_food1", "Resturant_food", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(foodApp.Models.Restaurant_food), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
 [assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_User_acc1", "User_acc", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.User_acc), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
 [assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_rest_User_acc", "User_acc", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.User_acc), "user_rest", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_rest), true)]
+[assembly: EdmRelationshipAttribute("foodAppModel", "FK_restuarant_tag_Restuarant1", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "restaurant_tag1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.restaurant_tag), true)]
+[assembly: EdmRelationshipAttribute("foodAppModel", "FK_Resturant_food_Restuarant1", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "Restaurant_food1", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.Restaurant_food), true)]
+[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_Restuarant1", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(foodApp.Models.RestaurantEntity), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
+[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_rest_Restuarant1", "Restaurant", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(foodApp.Models.RestaurantEntity), "user_rest", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_rest), true)]
+[assembly: EdmRelationshipAttribute("foodAppModel", "FK_user_food_Resturant_food11", "Restaurant_food1", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(foodApp.Models.Restaurant_food), "user_food", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(foodApp.Models.user_food), true)]
 
 #endregion
 
@@ -76,54 +76,6 @@ namespace foodApp.Models
         #endregion
     
         #region ObjectSet Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<RestaurantEntity> RestaurantEntity
-        {
-            get
-            {
-                if ((_RestaurantEntity == null))
-                {
-                    _RestaurantEntity = base.CreateObjectSet<RestaurantEntity>("RestaurantEntity");
-                }
-                return _RestaurantEntity;
-            }
-        }
-        private ObjectSet<RestaurantEntity> _RestaurantEntity;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Restaurant_tag> Restaurant_tag
-        {
-            get
-            {
-                if ((_Restaurant_tag == null))
-                {
-                    _Restaurant_tag = base.CreateObjectSet<Restaurant_tag>("Restaurant_tag");
-                }
-                return _Restaurant_tag;
-            }
-        }
-        private ObjectSet<Restaurant_tag> _Restaurant_tag;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Restaurant_food> Restaurant_food
-        {
-            get
-            {
-                if ((_Restaurant_food == null))
-                {
-                    _Restaurant_food = base.CreateObjectSet<Restaurant_food>("Restaurant_food");
-                }
-                return _Restaurant_food;
-            }
-        }
-        private ObjectSet<Restaurant_food> _Restaurant_food;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -188,34 +140,58 @@ namespace foodApp.Models
             }
         }
         private ObjectSet<user_rest> _user_rest;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<RestaurantEntity> RestaurantEntities
+        {
+            get
+            {
+                if ((_RestaurantEntities == null))
+                {
+                    _RestaurantEntities = base.CreateObjectSet<RestaurantEntity>("RestaurantEntities");
+                }
+                return _RestaurantEntities;
+            }
+        }
+        private ObjectSet<RestaurantEntity> _RestaurantEntities;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Restaurant_food> Restaurant_food
+        {
+            get
+            {
+                if ((_Restaurant_food == null))
+                {
+                    _Restaurant_food = base.CreateObjectSet<Restaurant_food>("Restaurant_food");
+                }
+                return _Restaurant_food;
+            }
+        }
+        private ObjectSet<Restaurant_food> _Restaurant_food;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<restaurant_tag> restaurant_tag
+        {
+            get
+            {
+                if ((_restaurant_tag == null))
+                {
+                    _restaurant_tag = base.CreateObjectSet<restaurant_tag>("restaurant_tag");
+                }
+                return _restaurant_tag;
+            }
+        }
+        private ObjectSet<restaurant_tag> _restaurant_tag;
 
         #endregion
 
         #region AddTo Methods
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the RestaurantEntity EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToRestaurantEntity(RestaurantEntity restaurantEntity)
-        {
-            base.AddObject("RestaurantEntity", restaurantEntity);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Restaurant_tag EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToRestaurant_tag(Restaurant_tag restaurant_tag)
-        {
-            base.AddObject("Restaurant_tag", restaurant_tag);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Restaurant_food EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToRestaurant_food(Restaurant_food restaurant_food)
-        {
-            base.AddObject("Restaurant_food", restaurant_food);
-        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -247,6 +223,30 @@ namespace foodApp.Models
         public void AddTouser_rest(user_rest user_rest)
         {
             base.AddObject("user_rest", user_rest);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the RestaurantEntities EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToRestaurantEntities(RestaurantEntity restaurantEntity)
+        {
+            base.AddObject("RestaurantEntities", restaurantEntity);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Restaurant_food EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToRestaurant_food(Restaurant_food restaurant_food)
+        {
+            base.AddObject("Restaurant_food", restaurant_food);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the restaurant_tag EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTorestaurant_tag(restaurant_tag restaurant_tag)
+        {
+            base.AddObject("restaurant_tag", restaurant_tag);
         }
 
         #endregion
@@ -394,16 +394,16 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Restaurant")]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Resturant_food_Restuarant1", "Restaurant")]
         public RestaurantEntity Restaurant
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restuarant1", "Restaurant").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restuarant1", "Restaurant").Value = value;
             }
         }
         /// <summary>
@@ -415,13 +415,13 @@ namespace foodApp.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restuarant1", "Restaurant");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restaurant", "Restaurant", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_Resturant_food_Restuarant1", "Restaurant", value);
                 }
             }
         }
@@ -432,18 +432,18 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Resturant_food1", "user_food")]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Resturant_food11", "user_food")]
         public EntityCollection<user_food> user_food
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food1", "user_food");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food11", "user_food");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food1", "user_food", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_food>("foodAppModel.FK_user_food_Resturant_food11", "user_food", value);
                 }
             }
         }
@@ -455,22 +455,22 @@ namespace foodApp.Models
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="foodAppModel", Name="Restaurant_tag")]
+    [EdmEntityTypeAttribute(NamespaceName="foodAppModel", Name="restaurant_tag")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class Restaurant_tag : EntityObject
+    public partial class restaurant_tag : EntityObject
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new Restaurant_tag object.
+        /// Create a new restaurant_tag object.
         /// </summary>
         /// <param name="rID">Initial value of the RID property.</param>
         /// <param name="tag">Initial value of the tag property.</param>
         /// <param name="id">Initial value of the ID property.</param>
-        public static Restaurant_tag CreateRestaurant_tag(global::System.Guid rID, global::System.String tag, global::System.Guid id)
+        public static restaurant_tag Createrestaurant_tag(global::System.Guid rID, global::System.String tag, global::System.Guid id)
         {
-            Restaurant_tag restaurant_tag = new Restaurant_tag();
+            restaurant_tag restaurant_tag = new restaurant_tag();
             restaurant_tag.RID = rID;
             restaurant_tag.tag = tag;
             restaurant_tag.ID = id;
@@ -567,16 +567,16 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Restaurant_tag_Restaurant", "Restaurant")]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_restuarant_tag_Restuarant1", "Restaurant")]
         public RestaurantEntity Restaurant
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Restaurant_tag_Restaurant", "Restaurant").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_restuarant_tag_Restuarant1", "Restaurant").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Restaurant_tag_Restaurant", "Restaurant").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_restuarant_tag_Restuarant1", "Restaurant").Value = value;
             }
         }
         /// <summary>
@@ -588,13 +588,13 @@ namespace foodApp.Models
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_Restaurant_tag_Restaurant", "Restaurant");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_restuarant_tag_Restuarant1", "Restaurant");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_Restaurant_tag_Restaurant", "Restaurant", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_restuarant_tag_Restuarant1", "Restaurant", value);
                 }
             }
         }
@@ -810,18 +810,18 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Restaurant_tag_Restaurant", "Restaurant_tag")]
-        public EntityCollection<Restaurant_tag> Restaurant_tag
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_restuarant_tag_Restuarant1", "restaurant_tag1")]
+        public EntityCollection<restaurant_tag> restaurant_tag
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Restaurant_tag>("foodAppModel.FK_Restaurant_tag_Restaurant", "Restaurant_tag");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<restaurant_tag>("foodAppModel.FK_restuarant_tag_Restuarant1", "restaurant_tag1");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Restaurant_tag>("foodAppModel.FK_Restaurant_tag_Restaurant", "Restaurant_tag", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<restaurant_tag>("foodAppModel.FK_restuarant_tag_Restuarant1", "restaurant_tag1", value);
                 }
             }
         }
@@ -832,18 +832,18 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Resturant_food_Restaurant", "Resturant_food")]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_Resturant_food_Restuarant1", "Restaurant_food1")]
         public EntityCollection<Restaurant_food> Restaurant_food
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Restaurant_food>("foodAppModel.FK_Resturant_food_Restaurant", "Resturant_food");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Restaurant_food>("foodAppModel.FK_Resturant_food_Restuarant1", "Restaurant_food1");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Restaurant_food>("foodAppModel.FK_Resturant_food_Restaurant", "Resturant_food", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Restaurant_food>("foodAppModel.FK_Resturant_food_Restuarant1", "Restaurant_food1", value);
                 }
             }
         }
@@ -854,18 +854,18 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Restaurant", "user_food")]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Restuarant1", "user_food")]
         public EntityCollection<user_food> user_food
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_food>("foodAppModel.FK_user_food_Restaurant", "user_food");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_food>("foodAppModel.FK_user_food_Restuarant1", "user_food");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_food>("foodAppModel.FK_user_food_Restaurant", "user_food", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_food>("foodAppModel.FK_user_food_Restuarant1", "user_food", value);
                 }
             }
         }
@@ -876,18 +876,18 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_rest_Restaurant", "user_rest")]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_rest_Restuarant1", "user_rest")]
         public EntityCollection<user_rest> user_rest
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_rest>("foodAppModel.FK_user_rest_Restaurant", "user_rest");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<user_rest>("foodAppModel.FK_user_rest_Restuarant1", "user_rest");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_rest>("foodAppModel.FK_user_rest_Restaurant", "user_rest", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<user_rest>("foodAppModel.FK_user_rest_Restuarant1", "user_rest", value);
                 }
             }
         }
@@ -1393,82 +1393,6 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Restaurant", "Restaurant")]
-        public RestaurantEntity Restaurant
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restaurant", "Restaurant").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restaurant", "Restaurant").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<RestaurantEntity> RestaurantReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restaurant", "Restaurant");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restaurant", "Restaurant", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Resturant_food1", "Resturant_food")]
-        public Restaurant_food Resturant_food
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Restaurant_food> Resturant_foodReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food1", "Resturant_food", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_User_acc1", "User_acc")]
         public User_acc User_acc
         {
@@ -1497,6 +1421,82 @@ namespace foodApp.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User_acc>("foodAppModel.FK_user_food_User_acc1", "User_acc", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Restuarant1", "Restaurant")]
+        public RestaurantEntity Restaurant_1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restuarant1", "Restaurant").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restuarant1", "Restaurant").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<RestaurantEntity> Restaurant_1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restuarant1", "Restaurant");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_user_food_Restuarant1", "Restaurant", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_food_Resturant_food11", "Restaurant_food1")]
+        public Restaurant_food Restaurant_food
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food11", "Restaurant_food1").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food11", "Restaurant_food1").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Restaurant_food> Restaurant_foodReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food11", "Restaurant_food1");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Restaurant_food>("foodAppModel.FK_user_food_Resturant_food11", "Restaurant_food1", value);
                 }
             }
         }
@@ -1666,44 +1666,6 @@ namespace foodApp.Models
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_rest_Restaurant", "Restaurant")]
-        public RestaurantEntity Restaurant
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restaurant", "Restaurant").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restaurant", "Restaurant").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<RestaurantEntity> RestaurantReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restaurant", "Restaurant");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restaurant", "Restaurant", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_rest_User_acc", "User_acc")]
         public User_acc User_acc
         {
@@ -1732,6 +1694,44 @@ namespace foodApp.Models
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<User_acc>("foodAppModel.FK_user_rest_User_acc", "User_acc", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("foodAppModel", "FK_user_rest_Restuarant1", "Restaurant")]
+        public RestaurantEntity Restaurant_1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restuarant1", "Restaurant").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restuarant1", "Restaurant").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<RestaurantEntity> Restaurant_1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restuarant1", "Restaurant");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<RestaurantEntity>("foodAppModel.FK_user_rest_Restuarant1", "Restaurant", value);
                 }
             }
         }

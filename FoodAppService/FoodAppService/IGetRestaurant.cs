@@ -12,6 +12,12 @@ using FoodAppService;
 using System.Data.Entity;
 using System.Data.EntityClient;
 using System.Data.EntityModel;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Routing;
+using System.Web.Security;
+using System.Security.Principal;
+using System.Diagnostics.CodeAnalysis;
 namespace FoodAppService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IGetRestaurant" in both code and config file together.
@@ -25,7 +31,7 @@ namespace FoodAppService
             BodyStyle = WebMessageBodyStyle.Wrapped,
             UriTemplate = "json/Restaurants")]
         //method
-        List<GetRestaurant.Restaurant> getRestaurant();
+        List<FoodAppService.GetRestaurant.Restaurant> getRestaurant();
        
     }
 }

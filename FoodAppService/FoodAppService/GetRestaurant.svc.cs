@@ -17,6 +17,7 @@ using System.Data.EntityModel;
 using System.Data.EntityClient;
 using System.Web.Mvc;
 using System.Data.Entity;
+using System.Data.Services;
 namespace FoodAppService
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "GetRestaurant" in code, svc and config file together.
@@ -25,8 +26,9 @@ namespace FoodAppService
         //public int p;
         public List<Restaurant> getRestaurant()
         {
-            foodAppEntities context = new foodAppEntities();
-            List<RestaurantEntity> restaurantEntity = context.RestaurantEntity.Select(n => n).ToList<RestaurantEntity>();/*(from p in context.RestaurantEntities
+           
+            foodApp.Models.foodAppEntities context = new foodApp.Models.foodAppEntities();
+            List<RestaurantEntity> restaurantEntity = context.RestaurantEntities.Select(n => n).ToList<RestaurantEntity>();/*(from p in context.RestaurantEntities
                                     select p).ToList();*/
             Restaurant temp;
             List<Restaurant> rest = new List<Restaurant>();

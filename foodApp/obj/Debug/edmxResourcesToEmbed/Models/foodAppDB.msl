@@ -1,38 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="foodAppModelStoreContainer" CdmEntityContainer="foodAppEntities">
-    <EntitySetMapping Name="RestaurantEntity">
-      <EntityTypeMapping TypeName="foodAppModel.RestaurantEntity">
-        <MappingFragment StoreEntitySet="Restaurant">
-          <ScalarProperty Name="RID" ColumnName="RID" />
-          <ScalarProperty Name="Restaurant_name" ColumnName="Resturant_name" />
-          <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="average_rating" ColumnName="average_rating" />
-          <ScalarProperty Name="State" ColumnName="State" />
-          <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="Notes" ColumnName="Notes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Restaurant_tag">
-      <EntityTypeMapping TypeName="foodAppModel.Restaurant_tag">
-        <MappingFragment StoreEntitySet="Restaurant_tag">
-          <ScalarProperty Name="RID" ColumnName="RID" />
-          <ScalarProperty Name="tag" ColumnName="tag" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Restaurant_food">
-      <EntityTypeMapping TypeName="foodAppModel.Restaurant_food">
-        <MappingFragment StoreEntitySet="Resturant_food">
-          <ScalarProperty Name="RID" ColumnName="RID" />
-          <ScalarProperty Name="FID" ColumnName="FID" />
-          <ScalarProperty Name="food" ColumnName="food" />
-          <ScalarProperty Name="spicy_rating" ColumnName="spicy_rating" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="foodAppModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -73,6 +41,38 @@
           <ScalarProperty Name="rating" ColumnName="rating" />
           <ScalarProperty Name="review" ColumnName="review" />
           <ScalarProperty Name="URID" ColumnName="URID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RestaurantEntities">
+      <EntityTypeMapping TypeName="foodAppModel.RestaurantEntity">
+        <MappingFragment StoreEntitySet="Restaurant">
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="average_rating" ColumnName="average_rating" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="Restaurant_name" ColumnName="Resturant_name" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Restaurant_food">
+      <EntityTypeMapping TypeName="foodAppModel.Restaurant_food">
+        <MappingFragment StoreEntitySet="Restaurant_food">
+          <ScalarProperty Name="spicy_rating" ColumnName="spicy_rating" />
+          <ScalarProperty Name="food" ColumnName="food" />
+          <ScalarProperty Name="FID" ColumnName="FID" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restaurant_tag">
+      <EntityTypeMapping TypeName="foodAppModel.restaurant_tag">
+        <MappingFragment StoreEntitySet="restaurant_tag">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="RID" ColumnName="RID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
